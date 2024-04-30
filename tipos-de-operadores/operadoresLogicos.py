@@ -19,3 +19,4 @@ saldo >= saque and saque <= limite #True
 not 1000 < 500 #True
 
 #Parênteses tem impactao na ordem de precedencia das comparações lógicas!
+
