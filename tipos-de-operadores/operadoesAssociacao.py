@@ -4,6 +4,6 @@ saques = [1500, 100]
 
 "Python" in curso #True
 
-"laranja" not in frutas #True
+"uva" not in frutas #True
 
 200 in saques #False
