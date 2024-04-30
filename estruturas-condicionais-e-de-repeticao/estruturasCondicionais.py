@@ -27,3 +27,21 @@ elif opcao == 2:
     #...
 else:
     sys.exit("Opção inválida")
+    
+#IF aninhado
+conta_normal = True
+conta_universitaria = False
+saldo = 2000
+saque = 200
+cheque_especial = 450
+
+if conta_normal:
+    if saldo >= saque:
+        print("Saque realizado")
+    elif saque >= saldo:
+        print("Saldo realizado com uso de cheque especial!")
+elif conta_universitaria:
+    if saldo >= saque:
+        print("Saque realizado")
+    elif saque >= saldo:
+        print("Saldo insuficiente")
