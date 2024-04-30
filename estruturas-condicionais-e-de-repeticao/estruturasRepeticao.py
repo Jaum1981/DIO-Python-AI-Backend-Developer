@@ -30,11 +30,20 @@ while opcao !=0:
     elif opcao == 2:
         print("Exibindo Extrato")
         
-#Comando BREAK:
+#Comando Break:
 while True:
     numero = int(input("Informe um numero"))
     
-    if opcao == 10:
+    if numero == 10:
         break
+    
+    print(numero)
+    
+#Comando continue:
+while True:
+    numero = int(input("Informe um numero"))
+    
+    if numero % 2 == 0:
+        continue
     
     print(numero)
