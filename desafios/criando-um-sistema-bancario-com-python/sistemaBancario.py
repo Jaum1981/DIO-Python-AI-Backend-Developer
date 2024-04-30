@@ -19,7 +19,10 @@ while True:
 
     if opcao == 1:  # Depósito
         valor_deposito = float(input('Digite o valor que deseja depositar: '))
-        saldo += valor_deposito
+        if valor_deposito > 0:
+            saldo += valor_deposito
+        else:
+            print('Valor inválido!')
     elif opcao == 2:  # Saque
         valor_do_saque = float(input('Digite o valor que deseja sacar: '))
         if valor_do_saque > 0:
@@ -33,9 +36,12 @@ while True:
                 else:
                     print('Valor incompatível')
             else:
-                print('Limite diário de saques atingido')
+                print('Operação cancelada pois o limite diário de saques atingido, saldo não alterado!!!')
     elif opcao == 3:  # Exibir extrato
-        print(extrato)
+        print('\n---------EXTRATO---------')
+        print("Não foram realizadas movimentações." if not extrato else extrato)
+        print(f"\nSaldo: R$ {saldo:.2f}")
+        print('\n-------------------------')
     elif opcao == 0:  # Sair
         break
     else:
