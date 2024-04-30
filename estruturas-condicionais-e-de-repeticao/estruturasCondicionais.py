@@ -45,3 +45,8 @@ elif conta_universitaria:
         print("Saque realizado")
     elif saque >= saldo:
         print("Saldo insuficiente")
+        
+#IF ternario
+
+status = "sucesso" if saldo >= saque else "falha"
+print(f"{status} ao realizar o saque!")
