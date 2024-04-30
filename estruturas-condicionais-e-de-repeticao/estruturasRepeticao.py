@@ -19,7 +19,6 @@ for numero in range(0, 51, 5):
     print(numero, end="") #exibe de 5 em 5
     
 #Estrutura de repetição While:
-
 opcao = -1
 
 while opcao !=0:
@@ -30,3 +29,12 @@ while opcao !=0:
         #...
     elif opcao == 2:
         print("Exibindo Extrato")
+        
+#Comando BREAK:
+while True:
+    numero = int(input("Informe um numero"))
+    
+    if opcao == 10:
+        break
+    
+    print(numero)
