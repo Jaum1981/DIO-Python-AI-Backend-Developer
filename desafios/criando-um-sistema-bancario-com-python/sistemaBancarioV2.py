@@ -88,9 +88,9 @@ def listar_usuarios(usuarios):
 def listar_contas(contas):
     for conta in contas:
         linha = f"""\
-              Agencia: \t{contas["agencia"]}
-              Numero da conta: \t\t{contas["numero da conta"]}
-              Usuario : \t{contas["usuario"]["nome"]}
+              Agencia: \t{conta["agencia"]}
+              Numero da conta: \t\t{conta["numero da conta"]}
+              Usuario : \t{conta["usuario"]["nome"]}
               """
     print("=" * 100)
     print(textwrap.dedent(linha))
