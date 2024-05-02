@@ -81,10 +81,19 @@ def cadastrar_conta_bancaria(agencia, numero_da_conta, usuarios):
     print("@@@Usuario nao encontrado@@@")
     return
     
-
 def listar_usuarios(usuarios):
     for usuario in usuarios:
         print(usuario)
+        
+def listar_contas(contas):
+    for conta in contas:
+        linha = f"""\
+              Agencia: \t{contas["agencia"]}
+              Numero da conta: \t\t{contas["numero da conta"]}
+              Usuario : \t{contas["usuario"]["nome"]}
+              """
+    print("=" * 100)
+    print(textwrap.dedent(linha))
 
 def menu():
     menu = """\n
@@ -95,6 +104,7 @@ def menu():
     [4]\tNova Conta
     [5]\tNovo Usuario
     [6]\tListar Usuarios
+    [7]\tListar Contas
     [0]\tSair
 
     => """
@@ -147,6 +157,9 @@ def main():
         elif opcao == "6":
             listar_usuarios(usuarios)
             
+        elif opcao == "7":
+            listar_contas(contas)    
+        
         elif opcao == "0":
             break
     
